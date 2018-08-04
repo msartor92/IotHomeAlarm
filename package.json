@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/msartor92/IotHomeAlarm"
   },
   "version": "0.1.0",
   "dependencies": {
