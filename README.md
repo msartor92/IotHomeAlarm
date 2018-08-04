@@ -1,13 +1,12 @@
 # IoT Home alarm system #
 
-Following this example you could understand how to convert your home's old wired alarm with a pre-recorded phone notification to a new IoT system.
+Following this example you can understand how to convert your home's old wired alarm with a pre-recorded phone notification to a new IoT system.
 
-The problem: I want to remove my home's landline phone. How can I continue to use my home's wired alarm without receiving a phone call when the alarm is triggered?
-
+The problem: I want to remove my home's landline phone. How can I continue to use my home's wired alarm and still get a notification when the alarm is triggered without the need to receive a phone call?
 
 What you need?
 
-1. Some electrician skill, a multimeter, screwdrivers
+1. Some electrician skills, a multimeter, screwdrivers
 2. Internet connection
 3. Your smartphone
 4. Working Raspberry Pi
@@ -28,8 +27,6 @@ The first thing you need to do is open your home's alarm control unit and identi
 Make some tests, starting from the siren connector. Once you have identified a correct signar, connect it to the Pi and proceed with the next steps.
 
 Below you can see my own connection as an example.
-
-
 
 ### Phase 2 - Configure [IFTTT](https://ifttt.com/) Applet ###
 Configure IFTTT to send notification to your [Android](https://play.google.com/store/apps/details?id=com.ifttt.ifttt&hl=it)/[IOS](https://itunes.apple.com/it/app/ifttt/id660944635?mt=8) mobile phone.
@@ -128,6 +125,6 @@ Useful links:
 To make the system more secure, I connected the Pi's power plug to the alarm's own 12V battery using a mobile phone car adapter. This is the easiest way to transform 12V into the 5V needed to power the Pi.
 In this way if your home loses power, your alarm will still be alive and rocking!
 
-**Keep attention that the USB charger is powerful enough for your Pi. The rPI 1 needs at least 2A to work consistently (3A in case of rPI 3 or newer). If you use a tablet charger (2A or more) you will have no problems.**
+**Keep attention that the USB charger you chose is powerful enough for your Pi. The rPI 1 needs at least 2A to work consistently (3A in case of rPI 3 or newer). If you use a tablet charger (2A or more) you should have no problems.**
     
 [USB Charger](https://www.amazon.com/AUKEY-Charger-Output-iPhone-Samsung/dp/B00M6QODH2/ref=sr_1_15?ie=UTF8&qid=1533384251&sr=8-15&keywords=mobile+car+charger)
