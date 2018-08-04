@@ -24,7 +24,7 @@ What you need?
 ### Phase 1 - Identify a pin! ###
 The first thing you need to do is open your home's alarm control unit and identify where to connect your Pi. You need to identify a pin which emits signal when your alarm detects an intrusion. 
 
-Make some tests, starting from the siren connector. Once you have identified a correct signar, connect it to the Pi and proceed with the next steps.
+Make some tests, starting from the siren connector. Once you have identified a correct signal, connect it to the Pi and proceed with the next steps.
 
 Below you can see my own connection as an example.
 
@@ -46,7 +46,7 @@ To check the status of your new IoT alarm you need to configure two Amazon AWS s
 
 *[AWS Lambda pricing](https://aws.amazon.com/en/lambda/pricing/)*
 
-*[DynamoDB pricing](https://aws.amazon.com/en/dynamodb/pricing/)*
+*[AWS DynamoDB pricing](https://aws.amazon.com/en/dynamodb/pricing/)*
 
 **STEP ONE:** Enter in your AWS account and open DynamoDB section. You need to create a simple table with just one field. You can perform this operation using AWS console.
 
@@ -81,26 +81,27 @@ P.S. To make Lambda and Pi access DynamoDB you have to configure your account an
 This phase's main difficulty lays in how to detect the signal through GPIO and send it to the IFTTT back-end. 
 
 For this purpose i used a low level [GPIO library](https://github.com/fivdi/onoff), with a [Node.js](https://nodejs.org/) script. 
-The script is listening for events coming from pin 17, when an event is detected, it sends an HTTP request to all the addresses configured into the `addresses.json` file.
+The script is listening for events coming from pin 4, when an event is detected, it sends an HTTP request to all the addresses configured into the `addresses.json` file.
 
-To monitor your Pi, you can find instructions below in section 3. The script pushes the current timestamp into the DynamoDB table you created earlier.
+To monitor your Pi, you can find instructions below at point 4. The script pushes the current timestamp into the DynamoDB table you created earlier.
 
 How to make this work:
 
 0. Install [NPM](https://www.npmjs.com/) and [Node.js](https://nodejs.org/)
-1. Setup the notification URL
+1. Move to the folder that contains main.js and package.json and execute ```npm install```
+2. Setup the notification URL
     1. Open the `addresses.json` file
     2. Create an object inside the array for each user you want to be notified
     3. Put in the **url** field the address of the IFTTT webhook you created, and in the name field the name of the person that will be notified (for logging purposes only)
     4. Save and exit
-2. Setup main script
+3. Setup main script
     1. Copy the `main.js` file from this repository into your Pi home directory
     2. Setup a [cron](https://en.wikipedia.org/wiki/Cron) expression to run the script at boot. This will help you in case of your Pi rebooting or losing power, since it will run the script automatically on reboot.
 
     example: 
     `@reboot sudo /home/user/.nvm/versions/node/v8.11.1/bin/node /home/user/js/main.js >> /home/user/log/alarm_js.log 2>&1`
 
-3. Setup keepalive script
+4. Setup keepalive script
     1. Copy the `lambda.js` script into your Pi home.
     2. Open the file with a text editor
     3. Configure the AWS region you chose for your table, the table name and the IFTTT webhook URL.
