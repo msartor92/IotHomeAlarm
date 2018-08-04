@@ -1,0 +1,12 @@
+[
+    {
+        "url": "https://maker.ifttt.com/trigger/allarme_casa/with/key/222222222222",
+        "name": "Mine"
+    }, {
+        "url": "https://maker.ifttt.com/trigger/allarmecasa/with/key/1111111111111",
+        "name": "Her"
+    }, {
+        "url": "http://www.gogle.com",
+        "name": "Test"
+    }
+]

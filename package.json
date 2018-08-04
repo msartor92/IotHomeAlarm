@@ -1,0 +1,21 @@
+{
+  "name": "HomeAlarm",
+  "description": "basic utility",
+  "author": "Michele Sartor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "version": "0.1.0",
+  "dependencies": {
+    "aws-sdk": "^2.218.1",
+    "csv": "^2.0.0",
+    "onoff": "^3.0.2",
+    "request": "^2.8.5",
+    "simple-node-logger": "^0.93.12"
+  },
+  "engines": {
+    "npm": ">= 1.0.0"
+  }
+}
