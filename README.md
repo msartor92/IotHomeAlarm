@@ -13,7 +13,7 @@ What you need?
 5. An [AWS](https://aws.amazon.com/) account
 6. An [IFTTT](https://ifttt.com/) account
 
-### General description ###
+## General description
 
 **Step 1:** The idea is to connect the control unit of your home alarm platform to a GPIO of your Raspberry Pi. In this way when your alarm will be triggered, the GPIO will collect a signal that can be used to notify your mobile phone.
 
@@ -21,7 +21,7 @@ What you need?
 
 **Step 3:** This already looks very nice, but last and not least, how to monitor that your Pi is always working correctly? Using the Amazon AWS free plan you can tell your Pi to send an alive signal that will checked from a cronned lambda expression. In case of failure a KO notification will be sent.
 
-### Phase 1 - Identify a pin! ###
+## Phase 1 - Identify a pin!
 The first thing you need to do is open your home's alarm control unit and identify where to connect your Pi. You need to identify a pin which emits signal when your alarm detects an intrusion. 
 
 Make some tests, starting from the siren connector. Once you have identified a correct signal, connect it to the Pi and proceed with the next steps.
@@ -30,7 +30,7 @@ Below you can see my own connection as an example.
 
 <img src="circuit_example.png">
 
-### Phase 2 - Configure [IFTTT](https://ifttt.com/) Applet ###
+## Phase 2 - Configure [IFTTT](https://ifttt.com/) Applet
 Configure IFTTT to send notification to your [Android](https://play.google.com/store/apps/details?id=com.ifttt.ifttt&hl=it)/[IOS](https://itunes.apple.com/it/app/ifttt/id660944635?mt=8) mobile phone.
 
 You have to install the IFTTT app on all the devices which you want to receive the notification. Once you have those installed, create an IFTTT account for each user. 
@@ -41,7 +41,7 @@ To configure an applet, click on the new Applet button and choose **Webhooks** f
 Follow the applet creation steps, and set the text of the notification you want to recive. Then pick up the generated webhook URL that you will need in Setup Pi phase.
 
 
-### Phase 3 - Setup [AWS](https://aws.amazon.com/), [DynamoDB](https://aws.amazon.com/en/dynamodb/?hp=tile&so-exp=below) and [Lambda expression](https://aws.amazon.com/en/lambda/?nc2=h_m1) ###
+## Phase 3 - Setup [AWS](https://aws.amazon.com/), [DynamoDB](https://aws.amazon.com/en/dynamodb/?hp=tile&so-exp=below) and [Lambda expression](https://aws.amazon.com/en/lambda/?nc2=h_m1)
 To check the status of your new IoT alarm you need to configure two Amazon AWS services.
 
 *(Don't worry, for the purpouse of this project you don't have to pay anything. AWS Lambda and DynamoDB have free tiers under a certain range of usage).*
@@ -79,7 +79,7 @@ After submitting your code, schedule your lambda to run on a schedule, i chose t
 
 P.S. To make Lambda and Pi access DynamoDB you have to configure your account and roles. You can search on Amazon documentation how to do it. Enjoy!
 
-### Phase 4 - Setup the rPI ###
+## Phase 4 - Setup the rPI
 This phase's main difficulty lays in how to detect the signal through GPIO and send it to the IFTTT back-end. 
 
 For this purpose i used a low level [GPIO library](https://github.com/fivdi/onoff), with a [Node.js](https://nodejs.org/) script. 
@@ -112,7 +112,7 @@ How to make this work:
 
 The Pi setup is completed! Let's test it!
 
-### Hardware ###
+## Hardware
 
 I used a Raspberry Pi 1 model B, but you can choose a newer one. The only thing that changes in this project is GPIO pin to use.
 About Pi's OS, i'm running on [Raspbian](https://www.raspberrypi.org/downloads/raspbian/) that is a simple basic distro, but you may use the one you prefer.
@@ -138,6 +138,7 @@ In this way if your home loses power, your alarm will still be alive and rocking
 I would say thanks to:
 - [FMeneguzzo](https://github.com/FMeneguzzo) to introduce me in AWS world.
 
+## LICENSE
 
 IotHomeAlarm
 Copyright (C) 2018  Michele Sartor
