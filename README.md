@@ -133,9 +133,7 @@ In this way if your home loses power, your alarm will still be alive and rocking
 [USB Charger](https://www.amazon.com/AUKEY-Charger-Output-iPhone-Samsung/dp/B00M6QODH2/ref=sr_1_15?ie=UTF8&qid=1533384251&sr=8-15&keywords=mobile+car+charger)7
 
 
-## Thanks
-
-I would say thanks to:
+## Thanks to:
 - [FMeneguzzo](https://github.com/FMeneguzzo) to introduce me in AWS world.
 
 ## LICENSE
