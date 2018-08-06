@@ -28,6 +28,8 @@ Make some tests, starting from the siren connector. Once you have identified a c
 
 Below you can see my own connection as an example.
 
+<img src="circuit_example.png">
+
 ### Phase 2 - Configure [IFTTT](https://ifttt.com/) Applet ###
 Configure IFTTT to send notification to your [Android](https://play.google.com/store/apps/details?id=com.ifttt.ifttt&hl=it)/[IOS](https://itunes.apple.com/it/app/ifttt/id660944635?mt=8) mobile phone.
 
