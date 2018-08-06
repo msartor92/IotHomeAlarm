@@ -130,4 +130,27 @@ In this way if your home loses power, your alarm will still be alive and rocking
 
 **Keep attention that the USB charger you chose is powerful enough for your Pi. The rPI 1 needs at least 2A to work consistently (3A in case of rPI 3 or newer). If you use a tablet charger (2A or more) you should have no problems.**
     
-[USB Charger](https://www.amazon.com/AUKEY-Charger-Output-iPhone-Samsung/dp/B00M6QODH2/ref=sr_1_15?ie=UTF8&qid=1533384251&sr=8-15&keywords=mobile+car+charger)
+[USB Charger](https://www.amazon.com/AUKEY-Charger-Output-iPhone-Samsung/dp/B00M6QODH2/ref=sr_1_15?ie=UTF8&qid=1533384251&sr=8-15&keywords=mobile+car+charger)7
+
+
+## Thanks
+
+I would say thanks to:
+- [FMeneguzzo](https://github.com/FMeneguzzo) to introduce me in AWS world.
+
+
+IotHomeAlarm
+Copyright (C) 2018  Michele Sartor
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
